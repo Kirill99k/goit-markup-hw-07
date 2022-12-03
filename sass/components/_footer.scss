@@ -1,8 +1,7 @@
-/* ---------------- footer ---------------- */
 .footer {
+  background-color: var(--secondary-background-color);
   padding-top: 60px;
   padding-bottom: 60px;
-  background-color: var(--secondary-background-color);
 }
 
 .footer__container {
@@ -46,7 +45,7 @@
 
 /* ---------------- network ---------------- */
 
-.network {
+.network--indent-left {
   margin-left: 70px;
 }
 
@@ -92,7 +91,7 @@
 
 /* ---------------- mailing ---------------- */
 
-.mailing {
+.mailing--indent-left {
   margin-left: 93px;
 }
 

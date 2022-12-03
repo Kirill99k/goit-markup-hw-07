@@ -163,7 +163,6 @@ img {
 }
 
 /* ---------------- header ---------------- */
-/* ---------------- header ---------------- */
 .header {
   border-bottom: 1px solid var(--border-hero-color);
 }
@@ -174,13 +173,19 @@ img {
   align-items: center;
 }
 
-/* ---------------- site-nav ---------------- */
-.site-nav {
+.header__site-nav {
   display: flex;
   gap: 50px;
   margin-left: 93px;
 }
 
+.header__list-contact {
+  margin-left: auto;
+  display: flex;
+  gap: 30px;
+}
+
+/* ---------------- site-nav ---------------- */
 .site-nav__link {
   position: relative;
   display: block;
@@ -215,12 +220,6 @@ img {
 }
 
 /* ---------------- list-contact ---------------- */
-.list-contact {
-  margin-left: auto;
-  display: flex;
-  gap: 30px;
-}
-
 .list-contact__link {
   display: flex;
   align-items: center;
@@ -328,8 +327,7 @@ img {
   margin-bottom: 50px;
 }
 
-/* ---------------- product ---------------- */
-.product {
+.examples__product {
   position: absolute;
   display: flex;
   align-items: center;
@@ -341,10 +339,13 @@ img {
   background-color: var(--product-background-rgba);
 }
 
+/* ---------------- product ---------------- */
 .product__title {
   color: var(--white-color);
   text-transform: uppercase;
-} /* ---------------- teams ---------------- */
+}
+
+/* ---------------- teams ---------------- */
 .team {
   background-color: var(--section-background-teams-color);
 }
@@ -457,11 +458,10 @@ img {
 }
 
 /* ---------------- footer ---------------- */
-/* ---------------- footer ---------------- */
 .footer {
+  background-color: var(--secondary-background-color);
   padding-top: 60px;
   padding-bottom: 60px;
-  background-color: var(--secondary-background-color);
 }
 
 .footer__container {
@@ -507,7 +507,7 @@ img {
 }
 
 /* ---------------- network ---------------- */
-.network {
+.network--indent-left {
   margin-left: 70px;
 }
 
@@ -551,7 +551,7 @@ img {
 }
 
 /* ---------------- mailing ---------------- */
-.mailing {
+.mailing--indent-left {
   margin-left: 93px;
 }
 

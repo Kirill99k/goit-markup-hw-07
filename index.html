@@ -26,7 +26,7 @@
       <div class="header__container container">
         <nav class="header__nav">
           <a href="/" class="logo">Web<span class="logo__text">Studio</span></a>
-          <ul class="site-nav list">
+          <ul class="site-nav header__site-nav list">
             <li class="site-nav__item">
               <a href="./index.html" class="link site-nav__link site-nav__link--current">Студія</a>
             </li>
@@ -36,7 +36,7 @@
             <li class="site-nav__item"><a href="#" class="link site-nav__link">Контакти</a></li>
           </ul>
         </nav>
-        <ul class="list-contact list">
+        <ul class="list-contact header__list-contact list">
           <li class="list-contact__item">
             <a href="mailto:info@devstudio.com" class="list-contact__link link">
               <svg class="list-contact__icon" width="16" height="12">
@@ -131,19 +131,19 @@
           <ul class="examples__list list">
             <li class="examples__item">
               <img src="./images/desktop.jpg" alt="десктопні додатки" width="370" />
-              <div class="product">
+              <div class="product examples__product">
                 <h3 class="product__title section__label">Десктопні додатки</h3>
               </div>
             </li>
             <li class="examples__item">
               <img src="./images/mobile.jpg" alt="мобільні додатки" width="370" />
-              <div class="product">
+              <div class="product examples__product">
                 <h3 class="product__title section__label">Мобільні додатки</h3>
               </div>
             </li>
             <li class="examples__item">
               <img src="./images/design.jpg" alt="дизайнерські рішення" width="370" />
-              <div class="product">
+              <div class="product examples__product">
                 <h3 class="product__title section__label">Дизайнерські рішення</h3>
               </div>
             </li>
@@ -375,7 +375,7 @@
     </main>
 
     <!-- footer -->
-    <footer class="footer">
+    <footer class="footer footer">
       <div class="footer__container container">
         <div class="requisites">
           <a href="/" class="logo">Web<span class="logo__text--inverse">Studio</span></a>
@@ -398,7 +398,7 @@
           </address>
         </div>
 
-        <div class="network">
+        <div class="network network--indent-left">
           <p class="network__title">приєднуйтесь</p>
           <ul class="network__list list">
             <li class="network__item">
@@ -432,7 +432,7 @@
           </ul>
         </div>
 
-        <div class="mailing">
+        <div class="mailing mailing--indent-left">
           <p class="mailing__title">Підпишіться на розсилку</p>
           <form class="mailing__form">
             <label class="mailing__label">
