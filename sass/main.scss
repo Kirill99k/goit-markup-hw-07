@@ -1,8 +1,12 @@
 /* ---------------- utils ---------------- */
 @import './utils/variables';
+@import './utils/mixins';
 @import './utils/hide';
 @import './utils/reset';
 @import './utils/common';
+
+/* ---------------- container ---------------- */
+@import './components/container';
 
 /* ---------------- button ---------------- */
 @import './components/button';
@@ -12,9 +16,6 @@
 
 /* ---------------- logo ---------------- */
 @import './components/logo';
-
-/* ---------------- nav-list ---------------- */
-@import './components/nav';
 
 /* ---------------- header ---------------- */
 @import './components/header';
@@ -29,7 +30,7 @@
 @import './components/examples';
 
 /* ---------------- teams ---------------- */
-@import './components/teams';
+@import './components/team';
 
 /* ---------------- client ---------------- */
 @import './components/client';

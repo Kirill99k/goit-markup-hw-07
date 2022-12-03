@@ -2,27 +2,18 @@
   display: flex;
 }
 
-.feature .section {
-  padding-top: 0;
-}
-
-.feature-list {
+.feature__list {
   display: flex;
   gap: 30px;
 }
 
-.feature-list .title {
-  margin-bottom: 10px;
-}
-
-.feature-item {
+.feature__item {
   width: 270px;
 }
 
-.feature-item .feature-icon {
-  display: flex;
+.feature__icon {
+  @include alignment;
   margin-bottom: 30px;
-  align-items: center;
   justify-content: center;
 
   height: 120px;
@@ -30,15 +21,10 @@
   background: var(--section-background-teams-color);
 }
 
-.feature-icon-antenna,
-.feature-icon-clock,
-.feature-icon-diagram,
-.feature-icon-astronaut {
-  width: 70px;
-  height: 70px;
+.feature__label {
+  margin-bottom: 10px;
 }
 
-.feature-list .text {
-  font-size: 14px;
-  line-height: 1.7;
+.feature__text {
+  @include font(null, 14px, 1.7);
 }

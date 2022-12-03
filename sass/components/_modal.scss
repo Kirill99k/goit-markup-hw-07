@@ -15,10 +15,6 @@
   pointer-events: none;
 }
 
-.backdrop.is-hidden .modal {
-  transform: translate(-50%, -50%) scale(1.2);
-}
-
 .modal {
   position: absolute;
   top: 50%;
@@ -32,62 +28,64 @@
   opacity: 1;
   transform: translate(-50%, -50%) scale(1);
   transition: transform 250ms var(--timing-function), opacity 250ms var(--timing-function);
+
+  .backdrop.is-hidden & {
+    transform: translate(-50%, -50%) scale(1.2);
+  }
 }
 
-.close-button {
+.modal__close-button {
   position: absolute;
   top: 8px;
   right: 8px;
-  display: flex;
+  @include alignment;
   justify-content: center;
-  align-items: center;
   width: 30px;
   height: 30px;
   border-radius: 50%;
   border: 1px solid rgba(0, 0, 0, 0.1);
   background-color: var(--white-color);
   cursor: pointer;
+
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+  }
 }
 
-.close-button:hover,
-.close-button:focus {
-  color: var(--accent-color);
-}
-
-.close-icon {
+.modal__close-icon {
   fill: currentColor;
 }
 
-.modal-title {
-  font-weight: 700;
-  font-size: 20px;
-  line-height: 1.15;
+.modal__title {
+  @include font(700, 20px, 1.15);
   color: var(--title-color);
   text-align: center;
   margin-bottom: 12px;
 }
 
-.modal-label {
+.modal__label {
   position: relative;
   margin-bottom: 10px;
   display: block;
+
+  &:nth-child(4) {
+    margin-bottom: 20px;
+  }
 }
 
-.modal-text {
+.modal__text {
   display: block;
-  font-weight: 400;
+  @include font(400, 12px, 1.17, 0.01em);
   margin-bottom: 4px;
-  font-size: 12px;
-  line-height: 1.7;
-  letter-spacing: 0.01em;
 }
 
-.modal-wrapper {
+.modal__wrapper {
   position: relative;
   width: 100%;
 }
 
-.modal-input {
+.modal__input {
   width: 100%;
   height: 40px;
   font-size: 12px;
@@ -96,25 +94,25 @@
   border-radius: 4px;
   outline: transparent;
   transition: border-color 250ms var(--timing-function);
+
+  &:focus {
+    border-color: var(--accent-color);
+  }
 }
 
-.modal-input:focus {
-  border-color: var(--accent-color);
-}
-
-.modal-icon {
+.modal__icon {
   position: absolute;
   left: 12px;
   top: 50%;
   transform: translateY(-50%);
   transition: fill 250ms var(--timing-function);
+
+  .modal__input:focus + & {
+    fill: var(--accent-color);
+  }
 }
 
-.modal-input:focus + .modal-icon {
-  fill: var(--accent-color);
-}
-
-.modal-comment {
+.modal__comment {
   width: 100%;
   height: 120px;
   font-size: 12px;
@@ -124,24 +122,20 @@
   outline: transparent;
   resize: none;
   transition: border-color 250ms var(--timing-function);
+
+  &:focus {
+    border-color: var(--accent-color);
+  }
 }
 
-.modal-comment:focus {
-  border-color: var(--accent-color);
-}
-
-.modal-label:nth-child(4) {
-  margin-bottom: 20px;
-}
-
-.modal-checkbox {
-  display: flex;
-  align-items: center;
+/* ---------------- agreement ---------------- */
+.agreement {
+  @include alignment;
   justify-content: center;
   margin-bottom: 30px;
 }
 
-.checkbox-icon {
+.agreement__checkbox-icon {
   display: inline-block;
   border: 2px solid var(--title-color);
   border-radius: 2px;
@@ -149,40 +143,39 @@
   cursor: pointer;
   transition: background-color 250ms var(--timing-function),
     border-color 250ms var(--timing-function);
+
+  .agreement__input:checked + & {
+    background-color: var(--accent-color);
+    border-color: transparent;
+  }
 }
 
-.checkbox:checked + .checkbox-icon {
-  background-color: var(--accent-color);
-  border-color: transparent;
-}
-
-.checkbox-text {
-  font-size: 14px;
-  line-height: 1.7;
+.agreement__text {
+  @include font(null, 14px, 1.7);
   margin-right: 7px;
 }
 
-.checkbox-link {
-  font-size: 14px;
-  line-height: 1.7;
+.agreement__link {
+  @include font(null, 14px, 1.7);
   color: var(--accent-color);
 }
 
-.modal .send-button {
+/* ---------------- modal send-button ---------------- */
+
+.modal__send-button {
   min-width: 200px;
   height: 50px;
-  display: flex;
+  @include alignment;
   justify-content: center;
-  align-items: center;
   margin: 0 auto;
   padding: 10px 52px;
   box-shadow: var(--box-shadow-form-button);
 
   transition: background-color 250ms var(--timing-function);
-}
 
-.modal .send-button:hover,
-.modal .send-button:focus {
-  background-color: var(--modal-button-background-color);
-  color: var(--white-color);
+  &:hover,
+  &:focus {
+    background-color: var(--modal-button-background-color);
+    color: var(--white-color);
+  }
 }

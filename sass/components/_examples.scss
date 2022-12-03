@@ -1,27 +1,23 @@
-.examples {
-  padding-top: 0;
-}
-
-.examples-list {
+.examples__list {
   display: flex;
 }
 
-.examples-item {
+.examples__item {
   position: relative;
+
+  &:not(:last-child) {
+    margin-right: 30px;
+  }
 }
 
-.examples-item:not(:last-child) {
-  margin-right: 30px;
-}
-
-.examples .section-title {
+.examples__title {
   margin-bottom: 50px;
 }
 
-.examples .product-name {
+/* ---------------- product ---------------- */
+.product {
   position: absolute;
-  display: flex;
-  align-items: center;
+  @include alignment;
   justify-content: center;
   bottom: 0;
   left: 0;
@@ -30,7 +26,7 @@
   background-color: var(--product-background-rgba);
 }
 
-.examples .product-title {
+.product__title {
   color: var(--white-color);
   text-transform: uppercase;
 }

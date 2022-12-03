@@ -1,12 +1,15 @@
+/* ---------------- logo ---------------- */
 .logo {
-  color: var(--secondary-text-color);
+  color: var(--accent-color);
   font-family: var(--logo-font-family), sans-serif;
-  font-weight: 700;
-  font-size: 26px;
-  line-height: 1.2;
+  @include font(700, 26px, 1.2);
   text-decoration: none;
+}
 
-  > span {
-    color: var(--accent-color);
-  }
+.logo__text {
+  color: var(--secondary-text-color);
+}
+
+.logo__text--inverse {
+  color: var(--white-color);
 }
