@@ -1,0 +1,75 @@
+.teams {
+  background-color: var(--section-background-teams-color);
+}
+
+.teams .section-title {
+  margin-bottom: 50px;
+}
+
+.teams-list {
+  display: flex;
+  gap: 30px;
+}
+
+.teams-item {
+  box-shadow: var(--box-shadow-teams-item);
+  border-radius: 0px 0px 4px 4px;
+  background-color: var(--white-color);
+}
+
+.teams-content {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.teams .title {
+  margin-bottom: 10px;
+
+  color: var(--title-color);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.2;
+  text-align: center;
+}
+
+.teams .text {
+  margin-bottom: 16px;
+
+  font-size: 16px;
+  line-height: 1.9;
+  text-align: center;
+}
+
+.teams-soc-list {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.teams-soc-item {
+  width: 44px;
+  height: 44px;
+}
+
+.teams-soc-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  color: var(--icon-color);
+
+  transition: color 250ms var(--timing-function), background 250ms var(--timing-function);
+}
+
+.teams-soc-icon {
+  fill: currentColor;
+}
+
+.teams-soc-link:hover,
+.teams-soc-link:focus {
+  background-color: var(--accent-color);
+  color: var(--white-color);
+}

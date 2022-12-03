@@ -1,0 +1,106 @@
+.portfolio-list-button {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+.portfolio .button-item:not(:last-child) {
+  margin-right: 8px;
+}
+
+.portfolio .button {
+  color: var(--title-color);
+  background-color: var(--section-background-teams-color);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.62;
+  letter-spacing: 0.03em;
+  border-color: transparent;
+  transition: background 250ms var(--timing-function), color 250ms var(--timing-function),
+    box-shadow 250ms var(--timing-function);
+}
+
+.portfolio .button:hover,
+.portfolio .button:focus {
+  box-shadow: var(--box-shadow-portfolio-button);
+  border-radius: 4px;
+
+  color: var(--white-color);
+  background-color: var(--accent-color);
+}
+
+.portfolio-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.portfolio-item {
+  width: calc((100% - 60px) / 3);
+}
+
+.portfolio-link {
+  display: block;
+  text-decoration: none;
+
+  transition: box-shadow 250ms var(--timing-function);
+}
+
+.portfolio-link:hover,
+.portfolio-link:focus {
+  box-shadow: var(--box-shadow-portfolio-link);
+}
+
+.portfolio-div {
+  position: relative;
+  overflow: hidden;
+}
+
+.portfolio-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+
+  transform: translateY(100%);
+  transition: transform 250ms var(--timing-function);
+
+  background-color: var(--overlay-background-color);
+}
+
+.portfolio-link:hover .portfolio-overlay {
+  transform: translateY(0);
+}
+
+.portfolio .overlay-text {
+  padding: 63px 24px;
+  font-size: 18px;
+  line-height: 1.55;
+  color: var(--white-color);
+}
+
+.portfolio-border {
+  padding: 20px 24px;
+  border-right: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
+  border-left: 1px solid var(--border-color);
+}
+
+.portfolio .title {
+  margin-bottom: 4px;
+
+  color: var(--title-color);
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.06em;
+}
+
+.portfolio .paragraph {
+  color: var(--primary-text-color);
+  font-size: 16px;
+  line-height: 1.88;
+}
